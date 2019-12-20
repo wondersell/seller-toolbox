@@ -1,0 +1,23 @@
+scrapinghub:
+  # Укажите здесь ключ API своего аккаунта на Scrapinghub. Его можно взять в разделе Account Settings > API key
+  api_key: 'your-scrapinghub-api-key-here'
+
+  # Укажите здесь ID своего проекта на Scrapinghub. Обычно его проще всего взять из адресной строки панели управления
+  project_id: 'your-scrapinghub-project-id-here'
+  
+seller:
+  # Перечислите здесь номера артикулов тех товаров, которые вы хотите отслеживать
+  sku_list:
+    - 11111
+    - 22222
+    - 33333
+    
+category_dashboard:
+  # Укажите здесь названия тега заданий (job) в Scrapinghub, по которому можно загружать данные для анализа категории
+  # Этот тег нужно будет всегда указывать при создании задания в Scrapinghub
+  job_tag_filter: 'your-preffered-tag-here'
+
+category_positions:
+  # Укажите здесь названия тега заданий (job) в Scrapinghub, по которому можно загружать данные для анализа
+  # позиций товаров в категории. Этот тег нужно будет всегда указывать при создании задания в Scrapinghub
+  job_tag_filter: 'your-preffered-tag-here'
