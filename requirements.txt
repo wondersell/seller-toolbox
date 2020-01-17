@@ -1,0 +1,9 @@
+jupyterlab
+msgpack-python
+matplotlib
+seaborn
+scrapinghub
+sklearn
+pyyaml
+openpyxl==3.0.1
+pandas

@@ -1,6 +1,6 @@
 # Чемоданчик успешного продавца на Wildberries
 
-Перед вами набор инструментов, укомплектованный для помощи в успешной продажи товаров на маркетплейсе [Wildberries](https://www.wildberries.ru/). Инструменты представляют собой блокноты, работающие в среде [Jupyter](https://jupyter.org/).
+Перед вами набор инструментов, укомплектованный для помощи в успешной продаже товаров на маркетплейсе [Wildberries](https://www.wildberries.ru/). Инструменты представляют собой блокноты, работающие в среде [Jupyter](https://jupyter.org/).
 
 На данный момент в чемоданчике хранится два инструмента – `category_dashboard` для общего анализа товарных категорий и `category_positions` для отслеживания позиции товаров продавца в выдаче категории.
 
@@ -27,15 +27,14 @@
  
  # Установка и настройка
  
- Инструменты работают на основе выгрузок данных, которые готовятся скрапером [wildsearch_crawler](https://github.com/wondersell/wildsearch_crawler). Для работы блокнотов необходимо:
+ Инструменты работают на основе выгрузок данных, которые готовятся скрапером [wildsearch_crawler](https://github.com/wondersell/wildsearch_crawler). Запуск блокнотов и их зависимостей можно и нужно производить с помощью Docker
+ 
+ Для работы блокнотов необходимо:
 
-1. Установить на компьютер язык программирования [Python](https://www.python.org/) версии 3.6 и выше. Мы рекомендуем работать через виртуальные окружения Python, поэтому стоит так же установить одно из них (например, [virtualenv](https://virtualenv.pypa.io/en/latest/))
-2. Установить среду разработки [Jupyter](https://jupyter.org/)
-3. Зарегистрировать аккаунт в сервисе [Scrapinghub](https://scrapinghub.com/)
-4. Загрузить в Scrapinghub краулер [wildsearch_crawler](https://github.com/wondersell/wildsearch_crawler)
-5. Клонировать репозиторий [seller_tools](https://github.com/wondersell/seller_tools)
-6. Скопировать файл `config_sample.yaml`, сохранить его под названием `config.yaml` и внести свои настройки, ориентируясь на комментарии в файле
-7. Открыть блокнот `_setup_deps.ipynb` и выполнить его. Это установит все необходимые зависимости для работы блокнотов.
+1. Скачать и установить [Docker Desktop](https://www.docker.com/products/docker-desktop) для вашей операционной системы
+2. В терминале выполнить команду `docker build --no-cache -t seller_toolbox https://github.com/wondersell/seller_toolbox.git`
+3. Запустить контейнер командой `docker run -it -p 8888:8888 seller_toolb`
+4. Открыть в браузере URL вида `http://127.0.0.1:8888/?token=8abb4c9ecb65b27b1b895674ca6c44e49192fa024e7ba934`, который появится после строчки `The Jupyter Notebook is running at` после запуска конейтнера.
 
 На этом все, блокноты готовы к работе. Осталось только загрузить в них данные и приступить к анализу.
 

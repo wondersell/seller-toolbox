@@ -126,6 +126,7 @@ dmypy.json
 
 # Seller toolbox staff
 /data/*
+/src/data
 config.yaml
 
 # PyCharm
